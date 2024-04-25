@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Wilayah;
 use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Support\Facades\Http;
 
 class wilayahController extends Controller
 {
