@@ -14,8 +14,9 @@ class wilayahController extends Controller
     public function index()
     {
         //
-        $data1="https://api.npoint.io/3a82e615c670475326cd";
-        $proses= $data1::all()->json_encode();
+        $response = Http::get('https://api.npoint.io/3a82e615c670475326cd');
+        $posts = $response->json();
+        $proses = response()->json($posts);
         
         return view('welcome', compact('proses'));
 
